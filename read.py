@@ -98,5 +98,6 @@ def fw_to_np(name):
 def read_geometry(lines):
 	for i in range(len(lines)):
 		lines[i] = [float(num) for num in lines[i].split()]
-	Xi = list(itertools.chain.from_iterable(lines))
+	#Xi = list(itertools.chain.from_iterable(lines))
+	Xi = np.array(itertools.chain.from_iterable(lines))
 	return Xi
